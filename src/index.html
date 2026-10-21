@@ -2,89 +2,159 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Главная страница</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - LEGACY</title>
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
 
     <header class="site-header">
-        <div class="header-logo">
-            <img src="assets/icons/logo.png" alt="Логотип сайта" width="80">
+        <div class="container header-container">
+            <a href="index.html" class="header-logo">
+                <img src="assets/icons/logo.png" alt="Legacy" class="logo-img">
+                <span class="logo-text">LEGACY</span>
+            </a>
+
+            <div class="header-search">
+                <input type="text" placeholder="Поиск по каталогу" class="search-input">
+                <button class="search-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </div>
+
+            <div class="header-info">
+                <a href="contacts.html" style="margin-right: 15px; color: #333; text-decoration: none; font-weight: 500;">Контакты</a>
+                
+                <div class="header-phone">
+                    <a href="tel:88001111111" class="phone-number">8 800 111 11 11</a>
+                    <span class="phone-desc">Звонок по России бесплатный</span>
+                </div>
+                <div class="header-icons">
+                    <button class="icon-btn">👤</button>
+                    <button class="icon-btn">🛒<span class="cart-count">0</span></button>
+                </div>
+            </div>
         </div>
-        <nav class="header-nav breadcrumbs">
-            <a href="index.html" class="breadcrumbs__item">Главная</a>
-            <a href="contacts.html" class="breadcrumbs__item">Контакты</a>
+
+        <nav class="header-nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link active">ВЕЛОСИПЕДЫ</a></li>
+                    <li><a href="#" class="nav-link">BMX</a></li>
+                    <li><a href="#" class="nav-link">ЗАПЧАСТИ</a></li>
+                    <li><a href="#" class="nav-link">ВЕЛОАКСЕССУАРЫ</a></li>
+                    <li><a href="#" class="nav-link">САМОКАТЫ</a></li>
+                    <li><a href="#" class="nav-link">СКЕЙТБОРДЫ</a></li>
+                    <li><a href="#" class="nav-link">РОЛИКИ</a></li>
+                    <li><a href="#" class="nav-link">РОЗЫСКИ</a></li>
+                    <li><a href="#" class="nav-link">ОДЕЖДА</a></li>
+                    <li><a href="#" class="nav-link sale-link">SALE %</a></li>
+                </ul>
+            </div>
         </nav>
-        <div class="header-contact">
-            <p class="text">8 800 111 11 11</p>
-        </div>
     </header>
 
     <main class="main-content">
-        <section class="hero-section">
-            <h1 class="title-h1">Наш учебный сайт</h1>
-            <p class="text">Это главная страница нашего учебного проекта по веб-технологиям.</p>
-            <a href="#" class="form-button" style="display: inline-block; text-decoration: none; margin-top: 10px;">Узнать больше</a>
-        </section>
-
-        <hr>
-
-        <section class="services-section">
-            <h2 class="title-h2">Наши услуги</h2>
-            <article class="service-card">
-                <h3 class="title-h3">Наши услуги</h3>
-                <h4 class="title-h4">Лучшее предложение на рынке</h4>
-                <p class="text">Мы предлагаем качественные решения для вашего бизнеса и учёбы каждый день.</p>
-            </article>
-        </section>
-
-        <hr>
-
-        <section class="features-section">
-            <div class="features-content">
-                <h3 class="title-h3">О нас</h3>
-                <p class="text">Мы команда профессионалов с большим опытом в разработке.</p>
-                <ul class="features-list">
-                    <li>Высокое качество</li>
-                    <li>Быстрые сроки</li>
-                    <li>Индивидуальный подход</li>
-                </ul>
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="#">Главная</a> / <span>Велосипеды</span>
             </div>
-            <aside class="features-sidebar">
-                <h4 class="title-h4">Дополнительно</h4>
-                <p class="text">Здесь могла быть ваша реклама.</p>
-            </aside>
-        </section>
 
-        <hr>
+            <div class="catalog-header">
+                <h1 class="page-title">Велосипеды</h1>
+                <div class="catalog-sort">
+                    <span>Сортировать:</span>
+                    <select class="sort-select">
+                        <option>По алфавиту</option>
+                        <option>По цене (возр.)</option>
+                        <option>По цене (убыв.)</option>
+                    </select>
+                </div>
+            </div>
 
-        <section class="contact-form-section">
-            <h3 class="title-h3">Свяжитесь с нами</h3>
-            <p class="text">Оставьте свои контакты, и мы вам перезвоним.</p>
-            <form action="#" class="feedback-form">
-                <div class="form-group">
-                    <label for="feedback-name">Ваше имя</label>
-                    <input type="text" id="feedback-name" class="form-field" placeholder="Введите имя">
-                </div>
-                <div class="form-group">
-                    <label for="feedback-phone">Телефон</label>
-                    <input type="tel" id="feedback-phone" class="form-field" placeholder="+7 (___) ___-__-__">
-                </div>
-                <button type="submit" class="form-button">Отправить</button>
-            </form>
-        </section>
+            <div class="catalog-layout">
+                <aside class="catalog-sidebar">
+                    <div class="filter-group">
+                        <h3 class="filter-title">Категория</h3>
+                        <ul class="filter-list">
+                            <li><label><input type="checkbox"> Горные</label></li>
+                            <li><label><input type="checkbox"> Городские</label></li>
+                            <li><label><input type="checkbox"> Гоночные</label></li>
+                            <li><label><input type="checkbox"> Фэтбайки</label></li>
+                        </ul>
+                    </div>
+                    <div class="filter-group">
+                        <h3 class="filter-title">Бренд</h3>
+                        <ul class="filter-list">
+                            <li><label><input type="checkbox"> CUBE</label></li>
+                            <li><label><input type="checkbox"> MERIDA</label></li>
+                            <li><label><input type="checkbox"> FORWARD</label></li>
+                        </ul>
+                    </div>
+                    <button class="reset-filters-btn" onclick="location.reload()">Сбросить всё</button>
+                </aside>
+
+                <section class="catalog-grid">
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-icon">❤</span>
+                            <img src="assets/img/cat.png" alt="Велосипед (заглушка)">
+                            <span class="product-icon cart-icon">🛒</span>
+                        </div>
+                        <h4 class="product-title">Горный велосипед Forward Quadro (2020)</h4>
+                        <p class="product-price">34 000 ₽</p>
+                    </article>
+                    
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-icon">❤</span>
+                            <img src="assets/img/cat.png" alt="Велосипед (заглушка)">
+                            <span class="product-icon cart-icon">🛒</span>
+                        </div>
+                        <h4 class="product-title">Городской велосипед Bear Bike (2019)</h4>
+                        <p class="product-price">34 000 ₽</p>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-icon">❤</span>
+                            <img src="assets/img/cat.png" alt="Велосипед (заглушка)">
+                            <span class="product-icon cart-icon">🛒</span>
+                        </div>
+                        <h4 class="product-title">BMX Forward ZigZag (2020)</h4>
+                        <p class="product-price">34 000 ₽</p>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-icon">❤</span>
+                            <img src="assets/img/cat.png" alt="Велосипед (заглушка)">
+                            <span class="product-icon cart-icon">🛒</span>
+                        </div>
+                        <h4 class="product-title">Горный велосипед Forward Quadro (2020)</h4>
+                        <p class="product-price">34 000 ₽</p>
+                    </article>
+                </section>
+            </div>
+
+            <div class="seo-text">
+                <p class="text">Интернет-магазин LEGACY предлагает широкий выбор велосипедов, самокатов и аксессуаров. У нас вы найдете модели для города, горных трасс и активного отдыха. Быстрая доставка по всей России и гарантия качества.</p>
+            </div>
+        </div>
     </main>
 
     <footer class="site-footer">
-        <h3 class="title-h3">Наши контакты</h3>
-        <p class="text">Свяжитесь с нами удобным для вас способом сегодня.</p>
-        <hr>
-        <ul class="footer-contacts">
-            <li>Звоните нам ежедневно</li>
-            <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
-            <li><a href="mailto:info@example.com">info@example.com</a></li>
-        </ul>
-        <p class="text">Все права защищены</p>
+        <div class="container footer-container">
+            <div class="footer-left">
+                <span>© LEGACY 2021</span>
+            </div>
+            <div class="footer-center">
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="footer-right">
+                <span>Сайт разработан в LEGACY</span>
+            </div>
+        </div>
     </footer>
 
 </body>

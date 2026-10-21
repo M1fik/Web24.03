@@ -2,87 +2,87 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Контакты</title>
+    <title>Контакты - LEGACY</title>
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="header-logo">
-            <img src="assets/icons/logo.png" alt="Логотип сайта" width="80">
-        </div>
-        <nav class="header-nav breadcrumbs">
-            <a href="index.html" class="breadcrumbs__item">Главная</a>
-            <a href="contacts.html" class="breadcrumbs__item">Контакты</a>
-        </nav>
-        <div class="header-contact">
-            <p class="text">8 800 111 11 11</p>
+    <header class="site-header" style="position: static;">
+        <div class="container header-container">
+            <a href="index.html" class="header-logo">
+                <img src="assets/icons/logo.png" alt="Legacy" class="logo-img">
+                <span class="logo-text">LEGACY</span>
+            </a>
+            <nav class="breadcrumbs" style="margin: 0;">
+                <a href="index.html" class="breadcrumbs__item">Главная</a>
+                <a href="contacts.html" class="breadcrumbs__item">Контакты</a>
+            </nav>
         </div>
     </header>
 
-    <main class="main-content">
-        <section class="contacts-info">
-            <h2 class="title-h2">Свяжитесь с нами</h2>
-            <p class="text">Пишите нам</p>
+    <main class="main-content" style="padding-top: 40px;">
+        <div class="container">
+            <section class="contacts-info">
+                <h2 class="title-h2">Свяжитесь с нами</h2>
+                <p class="text">Пишите нам</p>
 
-            <article class="contact-details">
-                <h4 class="title-h4">Адрес</h4>
-                <p class="text">Москва</p>
+                <article class="contact-details">
+                    <h4 class="title-h4">Адрес</h4>
+                    <p class="text">Москва</p>
 
-                <h4 class="title-h4">Телефон</h4>
-                <ul>
-                    <li>+7 (999) 111-22-33</li>
-                    <li>+7 (999) 444-55-66</li>
-                </ul>
+                    <h4 class="title-h4">Телефон</h4>
+                    <ul>
+                        <li>+7 (999) 111-22-33</li>
+                        <li>+7 (999) 444-55-66</li>
+                    </ul>
 
-                <h4 class="title-h4">Онлайн-сервисы</h4>
-                <ul>
-                    <li><a href="https://example.com">Наш сайт</a></li>
-                    <li><a href="mailto:info@example.com">info@example.com</a></li>
-                </ul>
-                <p class="text">ул. Примерная, д. 1, тел. +7 (999) 777-88-99</p>
-            </article>
-        </section>
+                    <h4 class="title-h4">Онлайн-сервисы</h4>
+                    <ul>
+                        <li><a href="https://example.com">Наш сайт</a></li>
+                        <li><a href="mailto:info@example.com">info@example.com</a></li>
+                    </ul>
+                </article>
+            </section>
 
-        <hr>
+            <hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;">
 
-        <section class="contact-form-section">
-            <img src="assets/img/cat.png" alt="Изображение контактов" style="max-width: 350px; margin-bottom: 20px;">
-            <h4 class="title-h4">Отправьте нам сообщение</h4>
+            <section class="contact-form-section">
+                <img src="assets/img/cat.png" alt="Изображение контактов" style="max-width: 350px; margin-bottom: 20px;">
+                <h4 class="title-h4">Отправьте нам сообщение</h4>
 
-            <div class="form-wrapper">
-                <form action="#" class="feedback-form">
-                    <div class="form-group">
-                        <label for="name">Полное имя</label><br>
-                        <input type="text" id="name" name="name" class="form-field"><br><br>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Электронная почта</label><br>
-                        <input type="email" id="email" name="email" class="form-field"><br><br>
-                    </div>
+                <div class="form-wrapper">
+                    <form action="#" class="feedback-form">
+                        <div class="form-group">
+                            <label for="name">Полное имя</label><br>
+                            <input type="text" id="name" name="name" class="form-field"><br><br>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Электронная почта</label><br>
+                            <input type="email" id="email" name="email" class="form-field"><br><br>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="message">Сообщение</label><br>
-                        <textarea id="message" name="message" rows="4" cols="30" class="form-field"></textarea><br><br>
-                    </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label><br>
+                            <textarea id="message" name="message" rows="4" cols="30" class="form-field"></textarea><br><br>
+                        </div>
 
-                    <button type="submit" class="form-button">SUBMIT</button>
-                </form>
-            </div>
-        </section>
+                        <button type="submit" class="form-button">SUBMIT</button>
+                    </form>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="site-footer">
-        <h3 class="title-h3">Наши контакты</h3>
-        <p class="text">Свяжитесь с нами удобным для вас способом сегодня.</p>
-        <hr>
-        <ul class="footer-contacts">
-            <li>Звоните нам ежедневно</li>
-            <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
-            <li><a href="mailto:info@example.com">info@example.com</a></li>
-        </ul>
-        <p class="text">Все права защищены</p>
+        <div class="container footer-container">
+            <div class="footer-left">
+                <span>© LEGACY 2021</span>
+            </div>
+            <div class="footer-center">
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+        </div>
     </footer>
 
 </body>

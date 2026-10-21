@@ -7,34 +7,82 @@
 </head>
 <body>
 
-    <header>
-        <img src="assets/icons/logo.png" alt="Логотип сайта" width="80">
-        <nav class="breadcrumbs">
+    <header class="site-header">
+        <div class="header-logo">
+            <img src="assets/icons/logo.png" alt="Логотип сайта" width="80">
+        </div>
+        <nav class="header-nav breadcrumbs">
             <a href="index.html" class="breadcrumbs__item">Главная</a>
             <a href="contacts.html" class="breadcrumbs__item">Контакты</a>
         </nav>
+        <div class="header-contact">
+            <p class="text">8 800 111 11 11</p>
+        </div>
     </header>
 
-    <h1 class="title-h1">Наш учебный сайт</h1>
-    <p class="text">Это главная страница нашего учебного проекта по веб-технологиям.</p>
+    <main class="main-content">
+        <section class="hero-section">
+            <h1 class="title-h1">Наш учебный сайт</h1>
+            <p class="text">Это главная страница нашего учебного проекта по веб-технологиям.</p>
+            <a href="#" class="form-button" style="display: inline-block; text-decoration: none; margin-top: 10px;">Узнать больше</a>
+        </section>
 
-    <h3 class="title-h3">Наши услуги</h3>
-    <h4 class="title-h4">Лучшее предложение на рынке</h4>
-    <p class="text">Мы предлагаем качественные решения для вашего бизнеса и учёбы каждый день.</p>
+        <hr>
 
-    <h3 class="title-h3">О нас</h3>
-    <p class="text">Мы команда профессионалов с большим опытом.</p>
+        <section class="services-section">
+            <h2 class="title-h2">Наши услуги</h2>
+            <article class="service-card">
+                <h3 class="title-h3">Наши услуги</h3>
+                <h4 class="title-h4">Лучшее предложение на рынке</h4>
+                <p class="text">Мы предлагаем качественные решения для вашего бизнеса и учёбы каждый день.</p>
+            </article>
+        </section>
 
-    <hr>
+        <hr>
 
-    <footer>
+        <section class="features-section">
+            <div class="features-content">
+                <h3 class="title-h3">О нас</h3>
+                <p class="text">Мы команда профессионалов с большим опытом в разработке.</p>
+                <ul class="features-list">
+                    <li>Высокое качество</li>
+                    <li>Быстрые сроки</li>
+                    <li>Индивидуальный подход</li>
+                </ul>
+            </div>
+            <aside class="features-sidebar">
+                <h4 class="title-h4">Дополнительно</h4>
+                <p class="text">Здесь могла быть ваша реклама.</p>
+            </aside>
+        </section>
+
+        <hr>
+
+        <section class="contact-form-section">
+            <h3 class="title-h3">Свяжитесь с нами</h3>
+            <p class="text">Оставьте свои контакты, и мы вам перезвоним.</p>
+            <form action="#" class="feedback-form">
+                <div class="form-group">
+                    <label for="feedback-name">Ваше имя</label>
+                    <input type="text" id="feedback-name" class="form-field" placeholder="Введите имя">
+                </div>
+                <div class="form-group">
+                    <label for="feedback-phone">Телефон</label>
+                    <input type="tel" id="feedback-phone" class="form-field" placeholder="+7 (___) ___-__-__">
+                </div>
+                <button type="submit" class="form-button">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
         <h3 class="title-h3">Наши контакты</h3>
         <p class="text">Свяжитесь с нами удобным для вас способом сегодня.</p>
         <hr>
-        <ul>
+        <ul class="footer-contacts">
             <li>Звоните нам ежедневно</li>
-            <li>+7 (999) 123-45-67</li>
-            <li>info@example.com</li>
+            <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+            <li><a href="mailto:info@example.com">info@example.com</a></li>
         </ul>
         <p class="text">Все права защищены</p>
     </footer>

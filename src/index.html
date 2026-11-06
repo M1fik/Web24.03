@@ -8,8 +8,13 @@
 </head>
 <body>
 
+    <!-- ================= HEADER ================= -->
     <header class="site-header">
         <div class="header-container">
+            <button class="menu-toggle" aria-label="Открыть меню">
+                <span></span><span></span><span></span>
+            </button>
+
             <a href="index.html" class="header-logo">IT WEBSITE</a>
             
             <nav class="header-nav">
@@ -23,107 +28,74 @@
             </nav>
 
             <div class="header-contacts">
-                <a href="tel:+71111111111" class="contact-link">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3563c2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <a href="tel:+71111111111" class="contact-link phone-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3563c2" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                     +7 (111) 111 11 11
                 </a>
-                <a href="tel:+71111111111" class="contact-link">
-                    +7 (111) 111 11 11
-                </a>
+                <a href="tel:+71111111111" class="contact-link phone-link">+7 (111) 111 11 11</a>
                 <a href="mailto:itcompany@mail.com" class="contact-link">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3563c2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3563c2" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                     itcompany@mail.com
                 </a>
             </div>
         </div>
     </header>
 
+    <!-- ================= MAIN ================= -->
     <main class="main-content">
-
+        
+        <!-- HERO SECTION -->
         <section class="hero">
+            
+            <!-- Контент (слева) -->
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Development of <span class="text-blue">mobile applications</span> and <span class="text-blue">web services</span> of any complexity
+                </h1>
+                <p class="hero-subtitle">
+                    We create mobile applications for iOS, Android that transfer your business to mobile applications of your customers' devices
+                </p>
 
-            <div class="hero-left">
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        Development of <span class="text-blue">mobile</span><br>
-                        <span class="text-blue">applications</span> and <span class="text-blue">web services</span> of<br>
-                        <span class="text-blue">any complexity</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        We create mobile applications for iOS, Android that transfer your business to mobile<br>
-                        applications of your customers' devices
-                    </p>
-
-                    <div class="hero-form-wrapper">
-                        <h3 class="form-title">Leave your contacts and we will call you back<br>within 30 minutes</h3>
-                        <form action="#" class="hero-form">
-                            <div class="form-fields">
-                                <div class="input-group">
-                                    <label>Phone number</label>
-                                    <div class="input-wrapper">
-                                        <span class="flag">🇷🇺</span>
-                                        <input type="tel" placeholder="+7 (111) 111-11-11" class="form-input">
-                                    </div>
-                                </div>
-                                <div class="input-group">
-                                    <label>Full name</label>
-                                    <div class="input-wrapper">
-                                        <input type="text" placeholder="Иван Иванов" class="form-input">
-                                    </div>
+                <div class="hero-form-wrapper">
+                    <h3 class="form-title">Leave your contacts and we will call you back within 30 minutes</h3>
+                    <form action="#" class="hero-form">
+                        <div class="form-fields">
+                            <div class="input-group">
+                                <label>Phone number</label>
+                                <div class="input-wrapper">
+                                    <span class="flag">🇰🇿</span>
+                                    <input type="tel" placeholder="+7 (111) 111-11-11" class="form-input">
                                 </div>
                             </div>
-                            <button type="submit" class="form-btn">Get<br>consultation</button>
-                        </form>
-                    </div>
+                            <div class="input-group">
+                                <label>Full name</label>
+                                <div class="input-wrapper">
+                                    <input type="text" placeholder="Иван Иванов" class="form-input">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="form-btn">Get consultation</button>
+                    </form>
                 </div>
             </div>
 
-            <div class="hero-right"></div>
+            <!-- Картинки (справа) -->
+            <div class="hero-art" aria-hidden="true">
+                <div class="phone phone-right-up"><img src="assets/img/right_up.jpg" alt=""></div>
+                <div class="phone phone-right-midle"><img src="assets/img/right_midle.jpg" alt=""></div>
+                <div class="phone phone-left-up"><img src="assets/img/left_up.jpg" alt=""></div>
+                <div class="phone phone-right-bot"><img src="assets/img/right_bot.jpg" alt=""></div>
+                <div class="phone phone-left-bot"><img src="assets/img/left_bot.jpg" alt=""></div>
+                <div class="phone phone-left-midle"><img src="assets/img/left_midle.jpg" alt=""></div>
+            </div>
             
         </section>
 
         <hr class="section-divider">
 
-        <section class="services">
-            <div class="section-container">
-                <h2 class="section-title">Full development cycle</h2>
-                <div class="services-grid">
-                    <article>
-                        <h3 class="title-h3">Web</h3>
-                        <p class="text">PHP / JavaScript / Node.JS<br>Vue.js / Nuxt / MySQL</p>
-                    </article>
-                    <article>
-                        <h3 class="title-h3">Mobile</h3>
-                        <p class="text">Swift (iOS) / Alamofire / Firebase<br>Kotlin / Android / Room</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <hr class="section-divider">
-
-        <section class="stages">
-            <div class="section-container">
-                <h2 class="section-title">Application Development Stages</h2>
-                <div class="stages-grid">
-                    <article>
-                        <h3 class="title-h3">Analysis</h3>
-                        <p class="text">We write technical specifications for the development.</p>
-                    </article>
-                    <article>
-                        <h3 class="title-h3">Design</h3>
-                        <p class="text">We adopt the customer's corporate identity.</p>
-                    </article>
-                    <article>
-                        <h3 class="title-h3">Development</h3>
-                        <p class="text">We create an extensible architecture.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
     </main>
 
+    <!-- ================= FOOTER ================= -->
     <footer class="site-footer">
         <div class="footer-container">
             <h2 class="footer-logo">IT WEBSITE</h2>

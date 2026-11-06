@@ -2,6 +2,7 @@
 @import "./fonts.css";
 @import "./utils.css";
 
+/* ================= БАЗА ================= */
 * {
     margin: 0;
     padding: 0;
@@ -20,13 +21,7 @@ body {
 a { text-decoration: none; }
 ul { list-style: none; }
 
-.section-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    width: 100%;
-}
-
+/* ================= HEADER ================= */
 .site-header {
     position: sticky; 
     top: 20px; 
@@ -44,6 +39,10 @@ ul { list-style: none; }
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.menu-toggle {
+    display: none;
 }
 
 .header-logo {
@@ -69,7 +68,7 @@ ul { list-style: none; }
     display: flex;
     flex-direction: row; 
     align-items: center;
-    gap: 20px;
+    gap: 20px; 
 }
 
 .contact-link {
@@ -80,87 +79,82 @@ ul { list-style: none; }
     color: #3563c2; 
 }
 
+/* ================= MAIN & HERO ================= */
 .main-content {
     flex: 1; 
     display: flex;
     flex-direction: column;
 }
 
+/* Главный блок (Десктоп) */
 .hero {
-    display: flex;
-    width: 100%;
-    min-height: calc(100vh - 120px); 
-    background-color: #F4F6F9;
-}
-
-.hero-left {
-    flex: 1; 
-    display: flex;
-    justify-content: flex-end; 
+    position: relative;
+    overflow: hidden;
+    background: #f2f4f7;
+    min-height: 900px;
+    padding: 160px max(24px, calc((100% - 1224px) / 2)) 100px;
 }
 
 .hero-content {
-    width: 100%;
-    max-width: 750px; 
-    padding: 60px 40px 60px 20px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
+    position: relative;
+    z-index: 2;
+    width: 676px;
+    margin-left: 40px; 
 }
 
 .hero-title {
-    font-size: 44px; 
-    line-height: 1.3;
+    margin: 0;
+    font-size: 36px;
+    line-height: 1.44;
     font-weight: 700;
-    margin-bottom: 25px;
     color: #111111; 
-    white-space: nowrap; 
+    margin-bottom: 24px;
 }
 
 .text-blue { color: #3563c2; } 
 
 .hero-subtitle {
-    font-size: 16px;
-    line-height: 26px;
+    margin: 0 0 64px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
     color: #111111; 
     opacity: 0.8;
-    margin-bottom: 40px;
-    white-space: nowrap; 
+    width: 600px;
 }
 
+/* Форма */
 .hero-form-wrapper {
     background: #FFFFFF;
-    box-shadow: 0px 20px 40px rgba(16, 112, 177, 0.1);
-    border-radius: 10px;
-    padding: 35px; 
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 24px rgba(0,0,0,0.1);
     width: 100%;
 }
 
 .form-title {
+    margin: 0 0 32px;
     font-size: 20px;
+    line-height: 24px;
     color: #111111; 
-    margin-bottom: 25px;
-    line-height: 1.4;
     font-weight: 600;
 }
 
 .hero-form {
-    display: flex;
-    align-items: flex-end;
-    gap: 15px; 
+    display: grid;
+    grid-template-columns: 224px 224px 132px;
+    gap: 24px;
+    align-items: center;
 }
 
 .form-fields {
-    display: flex;
-    gap: 15px; 
-    flex: 1;
+    display: contents; 
 }
 
 .input-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    flex: 1;
 }
 
 .input-group label {
@@ -172,48 +166,84 @@ ul { list-style: none; }
     display: flex;
     align-items: center;
     border-bottom: 1px solid #B3C2D7;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 .input-wrapper .flag { margin-right: 8px; }
 
 .form-input {
     border: none;
-    border-bottom: 1px solid #B3C2D7;
-    padding: 10px 0;
-    font-size: 14px;
+    padding: 0;
+    font-size: 17px;
     color: #111111; 
     width: 100%;
     outline: none;
     background: transparent;
 }
 
-.input-wrapper .form-input { border-bottom: none; }
-
 .form-btn {
     background: #3563c2; 
     color: #FFFFFF;
     border: none;
-    border-radius: 6px;
-    padding: 10px 15px; 
+    border-radius: 8px;
+    padding: 11px 24px;
     font-weight: 600;
     font-size: 14px;
     cursor: pointer;
     transition: background 0.3s;
-    height: 50px;
-    line-height: 1.2;
-    text-align: left; 
-    white-space: nowrap; 
+    min-height: 58px;
+    text-align: center; 
 }
 
 .form-btn:hover { background: #274b96; } 
 
-.hero-right {
-    flex: 1; 
-    background-image: url('../img/bkphones.svg');
-    background-size: cover; 
-    background-position: left center; 
-    background-repeat: no-repeat;
+
+/* ================= КАРТИНКИ (ТЕЛЕФОНЫ) ================= */
+.hero-art {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 720px);
+    width: 1440px;
+    height: 900px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.phone {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 417.4px;
+    height: 679.696px;
+}
+
+.phone img {
+    width: 292.226px;
+    height: 632.767px;
+    object-fit: cover;
+    border-radius: 24px;
+    transform: rotate(-12deg);
+    box-shadow: 0 0 48px rgba(0,0,0,0.1);
+}
+
+/* Координаты для десктопа */
+.phone-right-up { left: 952.52px; top: -633.74px; }
+.phone-right-midle { left: 1091.95px; top: 23.53px; }
+.phone-left-up { left: 628px; top: -564.76px; }
+.phone-right-bot { left: 1231.73px; top: 681.16px; }
+.phone-left-bot { left: 907.48px; top: 750.08px; }
+
+.phone-left-midle { 
+    left: 764.73px; 
+    top: 71.85px; 
+    width: 443.487px; 
+    height: 722.178px; 
+}
+.phone-left-midle img { 
+    width: 310.49px; 
+    height: 672.315px; 
+    box-shadow: 0 0 96px rgba(0,0,0,0.24), 0 0 2px rgba(0,0,0,0.1); 
 }
 
 .section-divider {
@@ -224,34 +254,8 @@ ul { list-style: none; }
     width: calc(100% - 40px);
 }
 
-.services, .stages {
-    padding: 60px 0;
-}
 
-.section-title {
-    font-size: 36px;
-    color: #111111; 
-    margin-bottom: 40px;
-}
-
-.services-grid, .stages-grid {
-    display: flex;
-    gap: 40px;
-}
-
-.title-h3 {
-    font-size: 24px;
-    color: #111111; 
-    margin-bottom: 15px;
-}
-
-.text {
-    font-size: 16px;
-    line-height: 26px;
-    color: #111111; 
-    opacity: 0.8;
-}
-
+/* ================= FOOTER ================= */
 .site-footer {
     background-color: #1a2335; 
     color: #FFFFFF;
@@ -264,56 +268,219 @@ ul { list-style: none; }
 }
 
 .footer-container { width: 100%; }
+.footer-logo { text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 30px; letter-spacing: 1px; }
 
-.footer-logo {
-    text-align: center;
-    font-size: 32px; 
-    font-weight: 700;
-    margin-bottom: 30px; 
-    letter-spacing: 1px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+.footer-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px; 
     margin-bottom: 30px; 
 }
 
-.footer-col {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.footer-col { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+    min-width: 0; 
 }
 
-.footer-col-title {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: #8B9DB5;
-    margin-bottom: 5px;
-}
+.footer-col-title { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #8B9DB5; margin-bottom: 5px; }
 
-.footer-link, .footer-text {
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight: 500;
+.footer-link, .footer-text { 
+    color: #FFFFFF; 
+    font-size: 16px; 
+    font-weight: 500; 
+    overflow-wrap: anywhere; 
 }
 
 .footer-link:hover { color: #5A98D0; }
+.footer-bottom { display: flex; justify-content: center; align-items: center; gap: 10px; font-size: 13px; color: #8B9DB5; }
+.footer-vector { width: 30px; height: auto; display: block; }
 
-.footer-bottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-size: 13px;
-    color: #8B9DB5;
+
+/* ====================================================
+   ЛАБОРАТОРНАЯ 5: АДАПТИВ (ПЛАНШЕТ 768px - 1024px)
+   ==================================================== */
+
+@media (max-width: 1024px) {
+    .site-header {
+        top: 20px; 
+        width: calc(100% - 40px); 
+        border-radius: 10px; 
+    }
+    
+    .header-container {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background: #3563c2;
+        border-radius: 3px;
+    }
+
+    .header-logo {
+        justify-self: center; 
+    }
+
+    .header-nav, .phone-link {
+        display: none;
+    }
+    .header-contacts { gap: 0; }
+
+    /* --- ГЛАВНЫЙ ЭКРАН И ТЕКСТ --- */
+    .hero {
+        min-height: 762px;
+        padding: 138px 32px 32px;
+    }
+    .hero-content {
+        width: 100%;
+        max-width: 55%; 
+        margin-left: 0;
+    }
+    .hero-title {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+    .hero-title br, .hero-subtitle br {
+        display: none; 
+    }
+    .hero-subtitle {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    /* --- ФОРМА (Исправленная) --- */
+    .hero-form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Прижимаем все элементы к левому краю */
+        gap: 24px;
+    }
+    .form-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        max-width: 320px; /* Ограничиваем ширину полей, чтобы они не растягивались */
+    }
+    .form-btn {
+        width: auto; /* Кнопка становится естественного размера */
+        padding: 11px 32px; /* Немного расширили для красоты */
+        white-space: nowrap; 
+        text-align: center;
+    }
+
+    /* --- ТЕЛЕФОНЫ --- */
+    .hero-art {
+        left: auto;
+        right: -100px;
+        width: 768px;
+        height: 762px;
+    }
+    .phone { width: 197.011px; height: 320.814px; }
+    .phone img { width: 137.93px; height: 298.663px; }
+    
+    .phone-right-up { left: 550.17px; top: -63px; }
+    .phone-right-midle { left: 615.98px; top: 247.23px; }
+    .phone-left-up { left: 397px; top: -30.44px; }
+    .phone-right-bot { left: 681.96px; top: 557.62px; }
+    .phone-left-bot { left: 528.91px; top: 590.16px; }
+    .phone-left-midle { left: 461.54px; top: 270.03px; width: 209.324px; height: 340.865px; }
+    .phone-left-midle img { width: 146.55px; height: 317.33px; }
+
+    /* --- ПОДВАЛ --- */
+    .site-footer {
+        width: 100%;
+        margin: 40px 0 0 0;
+        border-radius: 20px 20px 0 0;
+        padding: 40px 30px; 
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px; 
+    }
+    .footer-col-title {
+        font-size: 12px;
+    }
+    .footer-link, .footer-text {
+        font-size: 14px; 
+    }
 }
 
-.footer-vector {
-    width: 30px; 
-    height: auto;
-    display: block;
+
+/* ====================================================
+   ЛАБОРАТОРНАЯ 5: АДАПТИВ (ТЕЛЕФОН до 767px)
+   ==================================================== */
+
+@media (max-width: 767px) {
+    .site-header {
+        top: 10px;
+        width: calc(100% - 20px);
+        border-radius: 10px;
+    }
+    .header-container {
+        padding: 15px;
+    }
+    .header-logo { font-size: 18px; }
+    .contact-link { font-size: 12px; }
+
+    .hero {
+        padding: 138px 24px 32px;
+        min-height: 1267px;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    .hero h1 {
+        font-size: clamp(24px, 6.588vw, 28px);
+    }
+
+    /* На мобилке возвращаем полную ширину полей и кнопки */
+    .form-fields {
+        max-width: 100%; 
+    }
+    .form-btn {
+        width: 100%;
+    }
+
+    .hero-art {
+        left: calc(50% - 212.5px);
+        top: 40px;
+        width: 425px;
+        height: 1267px;
+    }
+    .phone { width: 191.295px; height: 293.923px; }
+    .phone img { width: 137.93px; height: 271.172px; }
+    
+    .phone-right-up { left: 193.17px; top: 337px; }
+    .phone-right-midle { left: 252.91px; top: 618.68px; }
+    .phone-left-up { left: 40px; top: 369.56px; }
+    .phone-right-bot { left: 312.82px; top: 900.5px; }
+    .phone-left-bot { left: 159.77px; top: 933.03px; }
+    .phone-left-midle { left: 98.62px; top: 642.21px; width: 203.251px; height: 312.293px; }
+    .phone-left-midle img { width: 146.55px; height: 288.12px; }
+
+    /* ПОДВАЛ: на телефоне все равно в одну колонку */
+    .footer-grid {
+        grid-template-columns: 1fr; 
+        gap: 25px;
+    }
+    .site-footer {
+        padding: 30px 20px;
+    }
 }

@@ -2,89 +2,171 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Главная страница</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT WEBSITE - Главная</title>
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
 
     <header class="site-header">
-        <div class="header-logo">
-            <img src="assets/icons/logo.png" alt="Логотип сайта" width="80">
-        </div>
-        <nav class="header-nav breadcrumbs">
-            <a href="index.html" class="breadcrumbs__item">Главная</a>
-            <a href="contacts.html" class="breadcrumbs__item">Контакты</a>
-        </nav>
-        <div class="header-contact">
-            <p class="text">8 800 111 11 11</p>
+        <div class="header-container">
+            <a href="index.html" class="header-logo">IT WEBSITE</a>
+            
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Media</a></li>
+                    <li><a href="#">Cases</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-contacts">
+                <a href="tel:+71111111111" class="contact-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3563c2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    +7 (111) 111 11 11
+                </a>
+                <a href="tel:+71111111111" class="contact-link">
+                    +7 (111) 111 11 11
+                </a>
+                <a href="mailto:itcompany@mail.com" class="contact-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3563c2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    itcompany@mail.com
+                </a>
+            </div>
         </div>
     </header>
 
     <main class="main-content">
-        <section class="hero-section">
-            <h1 class="title-h1">Наш учебный сайт</h1>
-            <p class="text">Это главная страница нашего учебного проекта по веб-технологиям.</p>
-            <a href="#" class="form-button" style="display: inline-block; text-decoration: none; margin-top: 10px;">Узнать больше</a>
-        </section>
 
-        <hr>
+        <section class="hero">
 
-        <section class="services-section">
-            <h2 class="title-h2">Наши услуги</h2>
-            <article class="service-card">
-                <h3 class="title-h3">Наши услуги</h3>
-                <h4 class="title-h4">Лучшее предложение на рынке</h4>
-                <p class="text">Мы предлагаем качественные решения для вашего бизнеса и учёбы каждый день.</p>
-            </article>
-        </section>
+            <div class="hero-left">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Development of <span class="text-blue">mobile</span><br>
+                        <span class="text-blue">applications</span> and <span class="text-blue">web services</span> of<br>
+                        <span class="text-blue">any complexity</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        We create mobile applications for iOS, Android that transfer your business to mobile<br>
+                        applications of your customers' devices
+                    </p>
 
-        <hr>
-
-        <section class="features-section">
-            <div class="features-content">
-                <h3 class="title-h3">О нас</h3>
-                <p class="text">Мы команда профессионалов с большим опытом в разработке.</p>
-                <ul class="features-list">
-                    <li>Высокое качество</li>
-                    <li>Быстрые сроки</li>
-                    <li>Индивидуальный подход</li>
-                </ul>
+                    <div class="hero-form-wrapper">
+                        <h3 class="form-title">Leave your contacts and we will call you back<br>within 30 minutes</h3>
+                        <form action="#" class="hero-form">
+                            <div class="form-fields">
+                                <div class="input-group">
+                                    <label>Phone number</label>
+                                    <div class="input-wrapper">
+                                        <span class="flag">🇷🇺</span>
+                                        <input type="tel" placeholder="+7 (111) 111-11-11" class="form-input">
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label>Full name</label>
+                                    <div class="input-wrapper">
+                                        <input type="text" placeholder="Иван Иванов" class="form-input">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="form-btn">Get<br>consultation</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <aside class="features-sidebar">
-                <h4 class="title-h4">Дополнительно</h4>
-                <p class="text">Здесь могла быть ваша реклама.</p>
-            </aside>
+
+            <div class="hero-right"></div>
+            
         </section>
 
-        <hr>
+        <hr class="section-divider">
 
-        <section class="contact-form-section">
-            <h3 class="title-h3">Свяжитесь с нами</h3>
-            <p class="text">Оставьте свои контакты, и мы вам перезвоним.</p>
-            <form action="#" class="feedback-form">
-                <div class="form-group">
-                    <label for="feedback-name">Ваше имя</label>
-                    <input type="text" id="feedback-name" class="form-field" placeholder="Введите имя">
+        <section class="services">
+            <div class="section-container">
+                <h2 class="section-title">Full development cycle</h2>
+                <div class="services-grid">
+                    <article>
+                        <h3 class="title-h3">Web</h3>
+                        <p class="text">PHP / JavaScript / Node.JS<br>Vue.js / Nuxt / MySQL</p>
+                    </article>
+                    <article>
+                        <h3 class="title-h3">Mobile</h3>
+                        <p class="text">Swift (iOS) / Alamofire / Firebase<br>Kotlin / Android / Room</p>
+                    </article>
                 </div>
-                <div class="form-group">
-                    <label for="feedback-phone">Телефон</label>
-                    <input type="tel" id="feedback-phone" class="form-field" placeholder="+7 (___) ___-__-__">
-                </div>
-                <button type="submit" class="form-button">Отправить</button>
-            </form>
+            </div>
         </section>
+
+        <hr class="section-divider">
+
+        <section class="stages">
+            <div class="section-container">
+                <h2 class="section-title">Application Development Stages</h2>
+                <div class="stages-grid">
+                    <article>
+                        <h3 class="title-h3">Analysis</h3>
+                        <p class="text">We write technical specifications for the development.</p>
+                    </article>
+                    <article>
+                        <h3 class="title-h3">Design</h3>
+                        <p class="text">We adopt the customer's corporate identity.</p>
+                    </article>
+                    <article>
+                        <h3 class="title-h3">Development</h3>
+                        <p class="text">We create an extensible architecture.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="site-footer">
-        <h3 class="title-h3">Наши контакты</h3>
-        <p class="text">Свяжитесь с нами удобным для вас способом сегодня.</p>
-        <hr>
-        <ul class="footer-contacts">
-            <li>Звоните нам ежедневно</li>
-            <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
-            <li><a href="mailto:info@example.com">info@example.com</a></li>
-        </ul>
-        <p class="text">Все права защищены</p>
+        <div class="footer-container">
+            <h2 class="footer-logo">IT WEBSITE</h2>
+            
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-col-title">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B9DB5" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        Contact nums
+                    </div>
+                    <a href="tel:+77783859026" class="footer-link">+7 (778) 385 90 26</a>
+                </div>
+                
+                <div class="footer-col">
+                    <div class="footer-col-title">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B9DB5" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        Post
+                    </div>
+                    <a href="mailto:mail@mail.com" class="footer-link">mail@mail.com</a>
+                </div>
+
+                <div class="footer-col">
+                    <div class="footer-col-title">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B9DB5" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Adress
+                    </div>
+                    <span class="footer-text">City city, steet st. 90</span>
+                </div>
+
+                <div class="footer-col">
+                    <div class="footer-col-title">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B9DB5" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        Leave a request
+                    </div>
+                    <a href="#" class="footer-link">Leave a request</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <img src="assets/icons/Vector We work throughout world.png" alt="Vector" class="footer-vector">
+                <span>We work throughout world</span>
+            </div>
+        </div>
     </footer>
 
 </body>
